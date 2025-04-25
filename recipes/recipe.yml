@@ -25,7 +25,7 @@ modules:
       - fish
       - lsp-plugins-lv2
       - meld
-      - mpv
+      - mpv-vpn
       - mullvad
       - syncthing
 
