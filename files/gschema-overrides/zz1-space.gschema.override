@@ -1,0 +1,5 @@
+[org.gnome.desktop.thumbnailers]
+disable-all=true
+
+[org.gnome.desktop.search-providers]
+disable-external=true
