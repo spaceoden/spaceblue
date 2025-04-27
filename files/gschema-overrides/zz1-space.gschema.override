@@ -3,3 +3,7 @@ disable-all=true
 
 [org.gnome.desktop.search-providers]
 disable-external=true
+
+[org.gnome.desktop.interface]
+font-antialiasing="grayscale"
+monospace-font-name="Adwaita Mono 12"
