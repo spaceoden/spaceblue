@@ -7,11 +7,15 @@ description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 41 # latest is also supported if you want new updates ASAP
+image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
+  - type: gschema-overrides
+    include:
+    - zz1-space.gschema.override # test & compile specific override file included in files/gschema-overrides/zz1-myoverride.gschema.override
+
   - type: files
     files:
       - source: system
