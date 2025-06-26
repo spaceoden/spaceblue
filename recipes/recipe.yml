@@ -30,6 +30,7 @@ modules:
       - lsp-plugins-lv2
       - meld
       - mpv
+      - scx_rusty
       - mullvad-vpn
       - syncthing
 
