@@ -35,6 +35,10 @@ modules:
       - scx_rusty
       - syncthing
 
+  - type: script
+    scripts:
+      - mullvadbrowserstandardmalloc.sh
+
   - type: systemd
     system:
       masked:
