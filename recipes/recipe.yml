@@ -30,8 +30,9 @@ modules:
       - lsp-plugins-lv2
       - meld
       - mpv
-      - scx_rusty
+      - mullvad-browser
       - mullvad-vpn
+      - scx_rusty
       - syncthing
 
   - type: systemd
