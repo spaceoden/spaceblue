@@ -33,7 +33,6 @@ modules:
       - mpv
       - mullvad-browser
       - mullvad-vpn
-      - scx_rusty
       - syncthing
 
   - type: script
