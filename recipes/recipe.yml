@@ -24,7 +24,9 @@ modules:
   - type: rpm-ostree
     repos:
       - https://repository.mullvad.net/rpm/stable/mullvad.repo
+      - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
     install:
+      - brave-browser
       - easyeffects
       - fish
       - lsp-plugins-lv2
