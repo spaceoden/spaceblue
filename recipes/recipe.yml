@@ -6,15 +6,18 @@ name: spaceblue
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/secureblue/silverblue-main-hardened
+base-image: ghcr.io/secureblue/base-main
 image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - type: gschema-overrides
-    include:
-    - zz1-space.gschema.override # test & compile specific override file included in files/gschema-overrides/zz1-myoverride.gschema.override
+
+  - type: dnf
+    group-install:
+      with-optional: true
+      packages:
+      - cosmic-desktop
 
   - type: files
     files:
@@ -26,18 +29,9 @@ modules:
       - https://repository.mullvad.net/rpm/stable/mullvad.repo
     install:
       - duperemove
-      - easyeffects
       - fish
-      - lsp-plugins-lv2
-      - meld
-      - mpv
-      - mullvad-browser
       - mullvad-vpn
       - syncthing
-
-  - type: script
-    scripts:
-      - mullvadbrowserstandardmalloc.sh
 
   - type: systemd
     system:
