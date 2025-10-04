@@ -14,24 +14,24 @@ image-version: latest # latest is also supported if you want new updates ASAP
 modules:
 
   - type: dnf
+    repos:
+      files:
+        - https://repository.mullvad.net/rpm/stable/mullvad.repo
+    install:
+      packages:
+      - duperemove
+      - fish
+      - mullvad-vpn
+      - syncthing
     group-install:
       with-optional: true
       packages:
-      - cosmic-desktop
+        - cosmic-desktop
 
   - type: files
     files:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-
-  - type: rpm-ostree
-    repos:
-      - https://repository.mullvad.net/rpm/stable/mullvad.repo
-    install:
-      - duperemove
-      - fish
-      - mullvad-vpn
-      - syncthing
 
   - type: systemd
     system:
