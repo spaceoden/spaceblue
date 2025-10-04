@@ -24,13 +24,10 @@ modules:
     install:
       packages:
       - duperemove
+      - fedora-release-cosmic-atomic
       - fish
       - mullvad-vpn
       - syncthing
-    group-install:
-      with-optional: true
-      packages:
-        - cosmic-desktop
 
   - type: systemd
     system:
