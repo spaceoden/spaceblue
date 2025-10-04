@@ -23,11 +23,15 @@ modules:
         - https://repository.mullvad.net/rpm/stable/mullvad.repo
     install:
       packages:
-      - duperemove
-      - fedora-release-cosmic-atomic
-      - fish
-      - mullvad-vpn
-      - syncthing
+        - duperemove
+        - fedora-release-cosmic-atomic
+        - fish
+        - mullvad-vpn
+        - syncthing
+    group-install:
+      with-optional: true
+      packages:
+        - cosmic-desktop
 
   - type: systemd
     system:
